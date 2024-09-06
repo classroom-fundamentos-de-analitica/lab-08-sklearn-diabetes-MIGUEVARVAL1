@@ -60,7 +60,7 @@ def compute_metrics():
     return mse_train, mae_train, r2_train, mse_test, mae_test, r2_test
 
 
-def test_run_grading():
+def run_grading():
     """Run grading script."""
 
     mse_train, mae_train, r2_train, mse_test, mae_test, r2_test = compute_metrics()
@@ -73,4 +73,6 @@ def test_run_grading():
     assert r2_test > 0.56, f"Test R2: {r2_test:.2f}"
 
 
-test_run_grading()
+
+if __name__ == "__main__":
+    run_grading()
